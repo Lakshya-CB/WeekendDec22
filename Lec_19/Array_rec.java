@@ -47,4 +47,14 @@ public class Array_rec {
 		}
 		return sp;
 	}
+	public static int LastOcc(int idx, int[] arr, int ali) {
+		if(idx==arr.length) {
+			return -1;
+		}
+		int sp = LastOcc(idx+1, arr, ali);
+		if(sp==-1 && arr[idx]==ali) {
+			return idx;
+		}
+		return sp;
+	}
 }
